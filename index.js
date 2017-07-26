@@ -58,7 +58,7 @@ server.register([require('inert'),require('vision')], (err) => {
             }
         },
         relativeTo: __dirname,
-        path: 'templates'
+        path: 'views'
     });
 
     server.route({ method: 'GET', path: '/', handler: rootHandler });
