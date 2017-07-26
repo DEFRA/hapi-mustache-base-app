@@ -1,0 +1,89 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "govuk_template_mustache",
+        "scope": null,
+        "escapedName": "govuk_template_mustache",
+        "name": "govuk_template_mustache",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/davecozens/git/hapi-mustache-base-app"
+    ]
+  ],
+  "_from": "govuk_template_mustache@latest",
+  "_id": "govuk_template_mustache@0.22.3",
+  "_inCache": true,
+  "_location": "/govuk_template_mustache",
+  "_nodeVersion": "6.11.1",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/govuk_template_mustache-0.22.3.tgz_1499941491837_0.720974832540378"
+  },
+  "_npmUser": {
+    "name": "alphagov",
+    "email": "govuk-dev@digital.cabinet-office.gov.uk"
+  },
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "govuk_template_mustache",
+    "scope": null,
+    "escapedName": "govuk_template_mustache",
+    "name": "govuk_template_mustache",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/govuk_template_mustache/-/govuk_template_mustache-0.22.3.tgz",
+  "_shasum": "8c4e99b06d1dc040aa38c3ded33f8d6078b5596a",
+  "_shrinkwrap": null,
+  "_spec": "govuk_template_mustache",
+  "_where": "/Users/davecozens/git/hapi-mustache-base-app",
+  "author": {
+    "name": "Government Digital Service developers",
+    "url": "https://gds.blog.gov.uk/"
+  },
+  "bugs": {
+    "url": "https://github.com/alphagov/govuk_template_mustache/issues"
+  },
+  "dependencies": {},
+  "description": "{{ mustache }} packaged version of the GOV.UK template",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "8c4e99b06d1dc040aa38c3ded33f8d6078b5596a",
+    "tarball": "https://registry.npmjs.org/govuk_template_mustache/-/govuk_template_mustache-0.22.3.tgz"
+  },
+  "gitHead": "c63e6243ab03e9f31a5f79ee96753da74c256ec0",
+  "homepage": "https://github.com/alphagov/govuk_template_mustache#readme",
+  "keywords": [
+    "alphagov",
+    "govuk",
+    "mustache",
+    "template"
+  ],
+  "license": "MIT",
+  "main": "views/layouts/govuk_template.html",
+  "maintainers": [
+    {
+      "name": "alphagov",
+      "email": "govuk-dev@digital.cabinet-office.gov.uk"
+    }
+  ],
+  "name": "govuk_template_mustache",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/alphagov/govuk_template_mustache.git"
+  },
+  "scripts": {},
+  "version": "0.22.3"
+}
