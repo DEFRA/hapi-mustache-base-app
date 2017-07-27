@@ -23,16 +23,16 @@ gulp.task('copy-govuk-template-mustache-views', () => {
 
 // Compile scss files to css
 gulp.task('styles', () => {
-  return gulp.src('/sass/**/*.scss')
+  return gulp.src('sass/**/*.scss')
     .pipe(sass({
       includePaths: [
         'node_modules/govuk_frontend_toolkit/stylesheets', // 1
         'node_modules/govuk-elements-sass/public/sass'     // 2
       ]
     }).on('error', sass.logError))
-    .pipe(gulp.dest('/public/govuk_template/stylesheets'))
+    .pipe(gulp.dest('public/govuk_template/stylesheets'))
 })
 
 gulp.task('default', [], () => {
-  gulp.run(['copy-govuk-template', 'copy-govuk-template-mustache', 'copy-govuk-template-mustache-views']);
+  gulp.run(['copy-govuk-template', 'copy-govuk-template-mustache', 'copy-govuk-template-mustache-views', 'styles']);
 });
