@@ -12,6 +12,7 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
     "lab": "^14.1.1",
     "standard": "^10.0.2"
   },
@@ -24,5 +25,11 @@
     "inert": "^4.2.1",
     "path": "^0.12.7",
     "vision": "^4.1.1"
+  },
+  "standard": {
+    "ignore": [
+      "node_modules/",
+      "public/"
+    ]
   }
 }

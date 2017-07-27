@@ -4,7 +4,7 @@ const Path = require('path')
 const defaultContext = {
   assetPath: '/public/govuk_template/',
   topOfPage: 'Login Handler',
-  head: 'Head',
+  head: '<link href="public/govuk_template/stylesheets/overrides.css" media="screen" rel="stylesheet" />',
   pageTitle: ' Generic Page',
   htmlLang: 'en',
   bodyClasses: 'some classes here',
