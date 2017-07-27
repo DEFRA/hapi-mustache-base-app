@@ -1,6 +1,4 @@
 const Hapi = require('hapi')
-const vision = require('vision')
-const Path = require('path')
 const server = new Hapi.Server()
 
 server.connection({ port: 8000 })
@@ -9,10 +7,10 @@ server.register([require('inert'), require('vision')], (err) => {
   if (err) {
     throw err
   }
-  //load views
+  // load views
   server.views(require('./views'))
 
-  //load routes
+  // load routes
   server.route(require('./src/routes/public'))
   server.route(require('./src/routes/default'))
 })

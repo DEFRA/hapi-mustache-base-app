@@ -1,3 +1,3 @@
 # Usage
 
-Reused Mustache components
+Reused Handlebars components
