@@ -2,9 +2,9 @@ const handlebars = require('handlebars')
 const Path = require('path')
 
 const defaultContext = {
-  assetPath: '/public/govuk_template/',
-  topOfPage: 'Login Handler',
-  head: '<link href="public/govuk_template/stylesheets/overrides.css" media="screen" rel="stylesheet" />',
+  assetPath: '/public/',
+  topOfPage: '',
+  head: '<link href="public/stylesheets/application.css" media="screen" rel="stylesheet" />',
   pageTitle: ' Generic Page',
   htmlLang: 'en',
   bodyClasses: 'some classes here',

@@ -3,7 +3,7 @@ module.exports = [{
   path: '/login',
   handler: function (request, reply) {
     console.log('requested login page')
-    var viewContext = {}
+    const viewContext = {}
 
     viewContext.pageTitle = ' Example Login Page'
 
@@ -14,7 +14,7 @@ module.exports = [{
   path: '/',
   handler: function (request, reply) {
     console.log('requested index page')
-    var viewContext = {}
+    const viewContext = {}
 
     viewContext.pageTitle = ' Example Page'
 
