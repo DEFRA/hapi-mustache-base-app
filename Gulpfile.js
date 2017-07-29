@@ -98,9 +98,10 @@ gulp.task('standard', () => {
         }))
 })
 
+
 // Test task
 gulp.task('test', [], () => {
-    // TODO
+    // TODO - run tests
     gulp.run('standard')
 })
 
@@ -117,10 +118,9 @@ gulp.task('build', ['clean'], (done) => {
 gulp.task('browser-sync', ['nodemon'], () => {
     browserSync.init({
         proxy: 'http://localhost:8000',
-        // files: ['/src/**/*.*', '/views/**/*.*'],
-        files: ['/src/**/*.*'],
         browser: 'google chrome',
         port: 3000,
+        reloadDelay: 1000
     })
 })
 
@@ -130,36 +130,21 @@ gulp.task('nodemon', (cb) => {
 
     return nodemon({
         script: 'index.js',
-        ext: 'js html',
-        watch: 'views'
-    }).on('start', () => {
-
-        // to avoid nodemon being started multiple times
+        ext: 'js html'
+    }).once('start', () => {
+        // To avoid nodemon being started multiple times
         if (!started) {
-            cb()
             started = true
+            cb()
         }
-
-        console.log('Starting xxxxx')
-
-        reload()
-
-    }).on('restart', () => {
-
-        console.log('Reloading xxxxx')
-
-        reload()
-	})
+    })
 })
 
 gulp.task('watch', () => {
     gulp.watch('src/assets/sass/**/*.scss', ['sass'])
-
     gulp.watch('public/**/*.*').on('change', reload)
-
     gulp.watch('views/**/*.*').on('change', reload)
-
-    // gulp.watch('src/**/*.*').on('change', reload);
+    gulp.watch('src/**/*.*').on('change', reload);
 });
 
 gulp.task('default', ['watch', 'sass', 'browser-sync'])
