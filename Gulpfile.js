@@ -18,7 +18,7 @@ const paths = {
 }
 
 gulp.task('clean', () => {
-  return del([paths.public, paths.govukModules])
+    return del([paths.public, paths.govukModules])
 })
 
 // Copy govuk files
@@ -49,9 +49,9 @@ gulp.task('copy-govuk-files', [], (done) => {
 // Install the govuk files into our application
 
 gulp.task('copy-template-assets', () => {
-  gulp
-    .src(paths.govukModules + '/govuk_template_mustache/assets/{images/**/*.*,javascripts/**/*.*,stylesheets/**/*.*}')
-    .pipe(gulp.dest(paths.public))
+    gulp
+        .src(paths.govukModules + '/govuk_template_mustache/assets/{images/**/*.*,javascripts/**/*.*,stylesheets/**/*.*}')
+        .pipe(gulp.dest(paths.public))
 })
 
 gulp.task('copy-template-view', () => {
