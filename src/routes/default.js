@@ -7,7 +7,7 @@ module.exports = [{
 
     viewContext.pageTitle = 'Example Page'
 
-    reply.view('water/index', viewContext)
+    reply.view('index', viewContext)
   }
 },
 {
@@ -19,7 +19,7 @@ module.exports = [{
 
     viewContext.pageTitle = 'Example Site Page'
 
-    reply.view('water/site', viewContext)
+    reply.view('site/site', viewContext)
   }
 }
 ]
