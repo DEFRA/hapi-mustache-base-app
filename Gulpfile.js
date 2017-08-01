@@ -56,8 +56,8 @@ gulp.task('copy-template-assets', () => {
 
 gulp.task('copy-template-view', () => {
   gulp
-    .src('node_modules/govuk_template_mustache/views/**/*.*')
-    .pipe(gulp.dest('src/views/govuk_template_mustache'))
+    .src('node_modules/govuk_template_mustache/views/layouts/govuk_template.html')
+    .pipe(gulp.dest('src/views/govuk_template_mustache/'))
 })
 
 gulp.task('install-govuk-files', [], (done) => {
