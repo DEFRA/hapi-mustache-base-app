@@ -120,7 +120,7 @@ gulp.task('browser-sync', ['nodemon'], () => {
   })
 })
 
-gulp.task('nodemon', (cb) => {
+gulp.task('nodemon', (done) => {
   let started = false
 
   return nodemon({
@@ -130,7 +130,7 @@ gulp.task('nodemon', (cb) => {
     // To avoid nodemon being started multiple times
     if (!started) {
       started = true
-      cb()
+      done()
     }
   })
 })
