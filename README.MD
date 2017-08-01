@@ -3,6 +3,19 @@
 
 Basic template project for a GOV.UK digital service using Hapi and Mustache
 
+The following Gulp tasks are supported:
+
+
+Building the project:
+```sh
+$ gulp build
+```
+
+Run the project in Google Chrome using Browser Sync (automatically reloads the browser on SCSS and JS/HTML changes):
+```sh
+$ gulp
+```
+
 ## Contributing to this project
 
 Please read the [contribution guidelines](/CONTRIBUTING.md) before submitting a pull request.

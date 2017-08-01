@@ -1,24 +1,26 @@
 const Hapi = require('hapi')
 const server = new Hapi.Server()
 
-server.connection({ port: 8000 })
+server.connection({
+    port: 8000
+})
 
 server.register([require('inert'), require('vision')], (err) => {
-  if (err) {
-    throw err
-  }
-  // load views
-  server.views(require('./views'))
+    if (err) {
+        throw err
+    }
+    // load views
+    server.views(require('./views'))
 
-  // load routes
-  server.route(require('./src/routes/public'))
-  server.route(require('./src/routes/default'))
+    // load routes
+    server.route(require('./src/routes/public'))
+    server.route(require('./src/routes/default'))
 })
 
 // Start the server
 server.start((err) => {
-  if (err) {
-    throw err
-  }
-  console.log('Server running at:', server.info.uri)
+    if (err) {
+        throw err
+    }
+    console.log('Server running at:', server.info.uri)
 })
