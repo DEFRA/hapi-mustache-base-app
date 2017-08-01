@@ -14,3 +14,16 @@ $path: "/public/images/";
 .teststyle {
   color: green;
 }
+
+// EA footer links
+@include media(mobile) {
+  .ea-footer, .ea-footer li  {
+    @include core-16;
+  }
+}
+.ea-footer li {
+    margin-right: 10px;
+}
+.ea-footer .inline {
+    display: inline;
+}
