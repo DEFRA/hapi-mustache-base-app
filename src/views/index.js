@@ -11,7 +11,7 @@ const defaultContext = {
   bodyStart: '',
   skipLinkMessage: '',
   cookieMessage: '',
-  headerClass: '',
+  headerClass: 'with-proposition',
   homepageUrl: 'https://www.gov.uk',
   logoLinkTitle: 'Go to the GOV.UK homepage',
   globalHeaderText: 'GOV.UK',
@@ -21,7 +21,7 @@ const defaultContext = {
                       '<a href="#proposition-links" class="js-header-toggle menu">Menu</a>' +
                       '<nav id="proposition-menu">' +
                         '<a href="/" id="proposition-name">' +
-                             'Apply for a __X__ permit' +
+                             'Apply for some type of permit' +
                         '</a>' +
                       '</nav>' +
                     '</div>' +
