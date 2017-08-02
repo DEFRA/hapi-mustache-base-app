@@ -12,6 +12,7 @@ const reload = browserSync.reload
 const paths = {
   assets: 'src/assets/',
   govukModules: 'govuk_modules/',
+  nodeModules: 'node_modules/',
   public: 'public/',
   src: 'src/',
   views: 'src/views/'
@@ -24,17 +25,17 @@ gulp.task('clean', () => {
 // Copy govuk files
 
 gulp.task('copy-govuk-toolkit', () => {
-  return gulp.src(['node_modules/govuk_frontend_toolkit/**/*.*'])
+  return gulp.src([paths.nodeModules + 'govuk_frontend_toolkit/**/*.*'])
     .pipe(gulp.dest(paths.govukModules + 'govuk_frontend_toolkit/'))
 })
 
 gulp.task('copy-govuk-template', () => {
-  return gulp.src(['node_modules/govuk_template_mustache/**/*.*'])
+  return gulp.src([paths.nodeModules + 'govuk_template_mustache/**/*.*'])
     .pipe(gulp.dest(paths.govukModules + 'govuk_template_mustache/'))
 })
 
 gulp.task('copy-govuk-elements-sass', () => {
-  return gulp.src(['node_modules/govuk-elements-sass/public/sass/**'])
+  return gulp.src([paths.nodeModules + 'govuk-elements-sass/public/sass/**'])
     .pipe(gulp.dest(paths.govukModules + '/govuk-elements-sass/'))
 })
 
@@ -49,15 +50,13 @@ gulp.task('copy-govuk-files', [], (done) => {
 // Install the govuk files into our application
 
 gulp.task('copy-template-assets', () => {
-  gulp
-        .src(paths.govukModules + '/govuk_template_mustache/assets/{images/**/*.*,javascripts/**/*.*,stylesheets/**/*.*}')
-        .pipe(gulp.dest(paths.public))
+  gulp.src(paths.govukModules + '/govuk_template_mustache/assets/{images/**/*.*,javascripts/**/*.*,stylesheets/**/*.*}')
+    .pipe(gulp.dest(paths.public))
 })
 
 gulp.task('copy-template-view', () => {
-  gulp
-    .src('node_modules/govuk_template_mustache/views/layouts/govuk_template.html')
-    .pipe(gulp.dest('src/views/govuk_template_mustache/'))
+  gulp.src(paths.nodeModules + 'govuk_template_mustache/views/layouts/govuk_template.html')
+    .pipe(gulp.dest(paths.views + 'govuk_template_mustache/'))
 })
 
 gulp.task('install-govuk-files', [], (done) => {
@@ -74,9 +73,9 @@ gulp.task('sass', () => {
     .pipe(sass({
       outputStyle: 'expanded',
       includePaths: [
-        'govuk_modules/govuk_frontend_toolkit/stylesheets',
-        'govuk_modules/govuk_template_mustache/assets/stylesheets',
-        'govuk_modules/govuk-elements-sass/'
+        paths.govukModules + 'govuk_frontend_toolkit/stylesheets',
+        paths.govukModules + 'govuk_template_mustache/assets/stylesheets',
+        paths.govukModules + 'govuk-elements-sass/'
       ]
     }).on('error', sass.logError))
     .pipe(sourcemaps.write())

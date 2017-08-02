@@ -18,9 +18,6 @@ lab.experiment('Basic HTTP Tests', () => {
       // Expect some content to be on the returned page
       Code.expect(response.result).to.contain('What\'s the site name?')
 
-      // Expect the content to be of a certain length
-      Code.expect(response.result).to.have.length(6051)
-
       server.stop(done)  // done() callback is required to end the test.
     })
   })
