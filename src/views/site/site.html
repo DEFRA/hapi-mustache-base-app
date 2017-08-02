@@ -1,13 +1,6 @@
 <main id="content" role="main">
-  <div class="phase-banner">
-    <p>
-      <strong class="phase-tag">BETA</strong>
-      <span>
-          This is a new service – your <a href="#">feedback</a> will help us to improve it.
-        </span>
-    </p>
-  </div>
 
+  {{> common/betaBanner}}
 
   <div class="grid-row">
     <div class="column-two-thirds">
@@ -20,9 +13,9 @@
 
         <div class="form-group">
           <label class="form-label" for="siteName">
-    Site name
-    <span class="form-hint">If it doesn’t already have a name, enter the name you’ll use</span>
-    </label>
+            Site name
+            <span class="form-hint">If it doesn’t already have a name, enter the name you’ll use</span>
+        </label>
           <input class="form-control form-control-char-60" id="siteName" name="siteName" type="text" value="">
         </div>
 
@@ -35,15 +28,16 @@
     </div>
   </div>
 
-  login screen here... Example partial:
-  <br/> {{> example}} More content:
+  <p>
+    Example partial with CSS styling from the assets/sass folder:
+  </p>
+
+  <p>
+    {{> example}}
+  </p>
+
+  <p>
+    <a href="/">Back</a>
+  </p>
 
 </main>
-
-
-
-<!-- <p>
-
-  login screen here... Example partial:
-  <br/> {{> example}} More content:
-</p> -->

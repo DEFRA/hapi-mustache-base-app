@@ -1,23 +1,25 @@
 module.exports = [{
   method: 'GET',
-  path: '/login',
-  handler: function (request, reply) {
-    console.log('requested login page')
-    const viewContext = {}
-
-    viewContext.pageTitle = ' Example Login Page'
-
-    reply.view('water/login', viewContext)
-  }
-}, {
-  method: 'GET',
   path: '/',
   handler: function (request, reply) {
-    console.log('requested index page')
+    console.log('Requested index page')
     const viewContext = {}
 
-    viewContext.pageTitle = ' Example Page'
+    viewContext.pageTitle = 'Example Page'
 
-    reply.view('water/index', viewContext)
+    reply.view('index', viewContext)
   }
-}]
+},
+{
+  method: 'GET',
+  path: '/site',
+  handler: function (request, reply) {
+    console.log('Requested site page')
+    const viewContext = {}
+
+    viewContext.pageTitle = 'Example Site Page'
+
+    reply.view('site/site', viewContext)
+  }
+}
+]
